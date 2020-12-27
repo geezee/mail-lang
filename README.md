@@ -13,3 +13,12 @@ I got this idea a long time ago and I'm only uploading it for giggles.
 You can find in `examples/fibonacci.mail` a program that computes the fibonacci number of the user's stdin input.
 
 Interesting domains to lookout for are: `...@local`, `...@global`, `...@arguments`, and `...@continuations`
+
+## How to compile and run
+
+```
+python compiler.py examples/fibonacci.mail && ./fibonacci
+```
+
+Oh you need a `/tmp` folder, the intermediary C code is written there;
+`/tmp/maillang-compiled-program.c`
