@@ -1,0 +1,159 @@
+From: main@global
+To: stdout@global
+Subject: Prompt user
+"Enter a number to compute its fibonacci number: "
+
+From: main@global
+To: stdin@global
+Subject: read user input
+
+From: main@global
+To: stdin@global
+Subject: RE: read user input
+number@local
+
+From: main@global
+To: log-number@local
+Subject: Set the value of `log-number`
+"You have entered the number: "
+
+From: main@global
+To: stdout@global
+Subject: print message (step 1)
+log-number@local
+
+From: main@global
+To: stdout@global
+Subject: print message (part 2)
+number@local
+
+From: main@global
+To: stdout@global
+Subject: print message (prat 3)
+"\n"
+
+From: main@global
+To: fibonacci@global
+Subject: compute fibonacci
+number@local
+
+From: main@global
+To: fibonacci@global
+Subject: RE: compute fibonacci
+fibonacci@local
+
+From: main@global
+To: log-message@local
+Subject: set log-message (part 1)
+"The result of fib("
+
+From: main@global
+To: stdout@global
+Subject: create output message (part 1)
+log-message@local
+
+From: main@global
+To: stdout@global
+Subject: create output message (part 2)
+number@local
+
+From: main@global
+To: log-message@local
+Subject: set log-message (part 2)
+") is: "
+
+From: main@global
+To: stdout@global
+Subject: create output message (part 3)
+log-message@local
+
+From: main@global
+To: stdout@global
+Subject: create output message (part 4)
+fibonacci@local
+
+
+
+
+From: fibonacci@global
+To: le@global
+Subject: is argument smaller than 2?
+0@arguments
+2
+
+From: fibonacci@global
+To: smaller@global
+Subject: RE: is argument smaller than 2?
+arg-is-0-or-1@local
+
+From: fibonacci@global
+To: if-then-else@global
+Subject: check termination
+arg-is-0-or-1@local
+return-one@global
+recursive-fibonacci@global
+
+From: fibonacci@global
+To: if-then-else@global
+Subject: RE: check termination
+fibonacci@continuation
+
+From: fibonacci@global
+To: fibonacci@continuation
+Subject: continue with fibonacci
+0@arguments
+
+From: return-one@global
+To: dummy@local
+0@arguments
+
+From:return-one@global
+To: answer@local
+1
+
+From: recursive-fibonacci@global
+To: minus@global
+Subject: Decrement arg by one
+0@arguments
+1
+
+From: recursive-fibonacci@global
+To: minus@global
+Subject: RE: Decrement arg by one
+arg-minus-one@local
+
+From: recursive-fibonacci@global
+To: minus@global
+Subject: Decrement arg by two
+0@arguments
+2
+
+From: recursive-fibonacci@global
+To: minus@global
+Subject: RE: Decrement arg by two
+arg-minus-two@local
+
+From: recursive-fibonacci@global
+To: fibonacci@global
+Subject: fibonacci left
+arg-minus-one@local
+
+From: recursive-fibonacci@global
+To: fibonacci@global
+Subject: RE: fibonacci left
+left@local
+
+From: recursive-fibonacci@global
+To: fibonacci@global
+Subject: fibonacci right
+arg-minus-two@local
+
+From: recursive-fibonacci@global
+To: fibonacci@global
+Subject: RE: fibonacci right
+right@local
+
+From: recursive-fibonacci@global
+To: add@global
+left@local
+right@local
